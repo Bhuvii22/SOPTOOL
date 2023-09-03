@@ -1,0 +1,42 @@
+<html>  
+<head>
+  <title>SOP Form</title>
+  <link rel="stylesheet" type="text/css" href="static\css\sopform.css">
+</head>
+<body>
+  <h1>Standard Operating Procedure Form</h1>
+ 
+  <form method="post">
+    {% csrf_token %}
+    <div id="leftside">
+      <label for="{{ form.title.id_for_label }}">Title:</label>
+      <input type="text" id="{{ form.title.id_for_label }}" name="{{ form.title.name }}" value="{{ form.title.value }}"><br>
+
+      <label for="{{ form.description.id_for_label }}">Description:</label>
+      <input type="text" id="{{ form.description.id_for_label }}" name="{{ form.description.name }}" value="{{ form.description.value }}"><br>
+
+      <label for="{{ form.steps.id_for_label }}">Steps:</label>
+      <input type="text" id="{{ form.steps.id_for_label }}" name="{{ form.steps.name }}" value="{{ form.steps.value }}"><br>
+
+      <label for="{{ form.email.id_for_label }}">Email:</label>
+      <input type="text" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" value="{{ form.email.value }}"><br>
+
+      <label for="{{ form.name.id_for_label }}">Name:</label>
+      <input type="text" id="{{ form.name.id_for_label }}" name="{{ form.name.name }}" value="{{ form.name.value }}"><br>
+
+      <label for="{{ form.age.id_for_label }}"value=" ">Age:</label>
+      <input type="text" id="{{ form.age.id_for_label }}" name="{{ form.age.name }}" value="{{ form.age.value }}"><br>
+
+      <label for="{{ form.highest_education.id_for_label }}">Highest Education:</label>
+      <input type="text" id="{{ form.highest_education.id_for_label }}" name="{{ form.highest_education.name }}" value="{{ form.highest_education.value }}"><br>
+
+      <label for="{{ form.institute.id_for_label }}">Institute:</label>
+      <input type="text" id="{{ form.institute.id_for_label }}" name="{{ form.institute.name }}" value="{{ form.institute.value }}"><br>
+
+      <button type="submit">Submit</button>
+    </div>
+
+
+  </form>
+</body>
+</html>
